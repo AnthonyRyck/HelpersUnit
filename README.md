@@ -13,7 +13,7 @@ Pour selectionner le constructeur (si plusieurs), il faut passer la liste de typ
 Ensuite, il suffit de récupérer le Mock voulu pour lui ajouter des comportements.  
 
 Exemple complet :  
-```cs
+```csharp
 #region Arrange
     
 MoqHelper moqHelper = new MoqHelper();
@@ -40,7 +40,7 @@ La `class ObjectHelpers` permet de faire des actions sur un objet/instance.
 
 - `public static void ReplaceFieldValue<T>(T obj, string namePrivateField, object newValue)`  
 Permet de modifier la valeur d'un champ privé (field) par une nouvelle valeur.  
-```cs
+```csharp
 // ...methode de test...
 
 #region Arrange
@@ -76,7 +76,7 @@ La `class ObjectFillerHelper` permet de faire de "nourrir" un objet, via des par
 
 - `public static T FillConstructorOf<T>(IEnumerable<Mock> mockList)`  
 En passant une liste de Mock, cette méthode va construire un objet.  
-```cs
+```csharp
 [Test]
 public async Task UserBlocked_Then_NoLogin()
 {
@@ -101,19 +101,19 @@ La `class Generate` permet de générer du contenu (string, email) :
 
 - `public static string GenerateString(int longueur)`  
 Permet de créer un string aléatoirement avec une longueur spécifiée.
-```cs
+```csharp
 string random = Generate.GenerateString(12);
 // output : "AsIU1g4Vcp4";
 ```
 - `public static string GenerateString(int longueur, string caractresUtilisatble)`  
 Permet de créer un string aléatoirement avec une longueur spécifiée et les caractères voulus.
-```cs
+```csharp
 string random = Generate.GenerateString(5, "ABCDefgh");
 // output : "AeCfg";
 ```
 - `public static string GenerateRandomEmail()`  
 Permet de générer un mail par rapport aux constantes de la lib.  
-```cs
+```csharp
 string email = Generate.GenerateRandomEmail();
 // output : "Kai-Haley866@yahoo.com
 ```
