@@ -1,0 +1,61 @@
+﻿namespace HelpersUnit.Datas
+{
+    public static class Constantes
+    {
+        public static readonly string[] Domains = { "gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "example.com" };
+
+        public static readonly string[] Names = new string[]
+        {
+            "Clara-Ellison",
+            "Kye-Hamilton",
+            "Mackenzie-Maxwell",
+            "Eden-McGuire",
+            "April-Marquez",
+            "Malakai-Dawson",
+            "Veronica-Lam",
+            "Bodie-Leon",
+            "Amora-Wolf",
+            "Jase-Beltran",
+            "Kaydence-Moody",
+            "Ryland-Cain",
+            "Kendra-Fletcher",
+            "Jay-Mason",
+            "Sienna-Castillo",
+            "Kai-Haley",
+            "Addilynn-Harris",
+            "Samuel-McCullough",
+            "Hana-Stafford",
+            "Alfredo-Roman",
+            "Astrid-Edwards",
+            "Adrian-Portillo",
+            "Nathalie-Gilbert",
+            "Tobias-Castro",
+            "Eloise-Lynch",
+            "Zane-Madden",
+            "Violette-Whitehead",
+            "Zayd-Malone",
+            "Skyler-Rowland",
+            "Eliezer-Magana",
+            "Amaris-Kemp",
+            "Melvin-May",
+            "Adriana-Guevara",
+            "Tommy-Barry",
+            "Waverly-Mora",
+            "Arturo-Powell",
+            "Vivian-Fernandez",
+            "Bentley-Arroyo",
+            "Kyra-McCarthy",
+            "Devin-Poole",
+            "Bonnie-Golden",
+            "Amias-Powell",
+            "Vivian-Howard",
+            "Jeremiah-Reese",
+            "Rosemary-Fuentes",
+            "Bowen-Arnold",
+            "Finley-Patterson",
+            "Amir-Mills",
+            "June-Mendez",
+            "Arthur-Reid"
+        };
+    }
+}
