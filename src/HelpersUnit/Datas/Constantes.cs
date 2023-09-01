@@ -55,7 +55,8 @@
             "Finley-Patterson",
             "Amir-Mills",
             "June-Mendez",
-            "Arthur-Reid"
+            "Arthur-Reid",
+            "Anthony-Ryck"
         };
     }
 }
