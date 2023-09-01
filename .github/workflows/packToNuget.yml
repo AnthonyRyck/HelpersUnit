@@ -1,0 +1,24 @@
+name: Build-Pack-Publish-to-Nuget
+
+on:
+  push:
+    paths:
+     - 'src/HelpersUnit**'
+     - '!.github/workflows/**'
+     - '!README.md'
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore ./src/HelpersUnit/HelpersUnit.csproj
+    - name: Creation du Nugget package
+      run: dotnet pack ./src/HelpersUnit/HelpersUnit.csproj --configuration Release -o .
+    - name: Deploy NuGet Package
+      run: dotnet nuget push *.nupkg --api-key ${{ secrets.KEYNUGET }} -s https://api.nuget.org/v3/index.json --skip-duplicate
