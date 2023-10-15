@@ -70,6 +70,56 @@ var result = resourceOwner.ValidateAsync(context);
 #endregion
 ```
 
+- `public static T InvokePrivateMethod<T>(object instance, string namePrivateMethod, params object[] parameters)`  
+Récupére le résultat d'une méthode privée dans une instance.  
+```csharp
+int id = 10;
+UneClassPasStatic uneInstance = new UneClassPasStatic();
+TestModel result = ObjectHelpers.InvokePrivateMethod<TestModel>(uneInstance, "GetTest", id);
+```
+- `public static void InvokePrivateMethod(object instance, string namePrivateMethod, params object[] parameters)`  
+Exécute une méthode privée dans une instance, SANS résultat.
+
+```csharp
+UneClassPasStatic uneInstance = new UneClassPasStatic();
+ObjectHelpers.InvokePrivateMethod(uneInstance, "MoiJeRetourneRien");
+```
+Note : dans cette exemple, il n'y a pas non plus de paramètre pour la méthode.  
+
+- `public static T InvokePrivateStaticMethod<T>(object instance, string namePrivateMethod, params object[] parameters)`  
+Récupére le résultat d'une méthode privée **STATIC** dans une instance.
+```csharp
+int id = 10;
+UneClassPasStatic uneInstance = new UneClassPasStatic();
+
+TestModel result = ObjectHelpers.InvokePrivateStaticMethod<TestModel>(uneInstance, "GetTestModel", id);
+```
+
+- `public static void InvokePrivateStaticMethod(object instance, string namePrivateMethod, params object[] parameters)`  
+Exécute une méthode privée STATIC dans une instance sans retour de résultat.
+```csharp
+int id = 10;
+UneClassPasStatic uneInstance = new UneClassPasStatic();
+
+ObjectHelpers.InvokePrivateStaticMethod(uneInstance, "UneMethodSansRetour", id);
+```
+
+- `public static T InvokePrivateStaticMethodInStaticClass<T>(Type staticClassType, string namePrivateMethod, params object[] parameters)`  
+Retourne le résultat d'une méthode "private static" dans une class static.
+```csharp
+double nbreUn = 10;
+double nbreDeux = 5;
+
+double result = ObjectHelpers.InvokePrivateStaticMethodInStaticClass<double>(typeof(MyStaticClass), "Multiplication", nbreUn, nbreDeux);
+```
+
+- `public static void InvokePrivateStaticMethodInStaticClass(Type staticClassType, string namePrivateMethod, params object[] parameters)`  
+Exécute une méthode "private static" sans retour de résultat dans une class static.
+```csharp
+ObjectHelpers.InvokePrivateStaticMethodInStaticClass(typeof(MyStaticClass), "UneMethodSansRetour");
+```
+Note : dans cette exemple, il n'y a pas non plus de paramètre pour la méthode.
+
 ### ObjectFillerHelper
 
 La `class ObjectFillerHelper` permet de faire de "nourrir" un objet, via des paramètres.  

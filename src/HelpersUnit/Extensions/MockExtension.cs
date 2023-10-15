@@ -1,7 +1,4 @@
 ﻿using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Hw.Emploi.Test.Common.Extensions
 {
