@@ -1,5 +1,8 @@
 # HelpersUnit
 
+[![NuGet](https://img.shields.io/nuget/vpre/HelpersUnit.svg)](https://www.nuget.org/packages/HelpersUnit)
+[![Downloads](https://img.shields.io/nuget/dt/HelpersUnit.svg)](https://www.nuget.org/packages/HelpersUnit)
+
 Il a pour but d'aider dans la création des tests unitaires. C'est un ensemble d'outils _(helpers, extensions,...)_.  
 
 ## Docs - Helpers
